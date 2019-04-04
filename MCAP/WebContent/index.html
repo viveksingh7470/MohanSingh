@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.slim.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/animate js.js"></script>
+<script type="text/javascript" src="js/wow-spec.js"></script>
+<title>BankApp index page</title>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar" style="background-color:#000; background:rgba(0,0,0,0.7);box-shadow:0px 0px 10px 10px #CCC">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+  <i class="fa fa-close" style="font-size:40px;color:#034f84"></i></a>
+  <a href="#"  style="font-size:20px;color:white">Home</a>
+  <a href="#" style="font-size:20px;color:white">Services</a>
+  <a href="register.jsp"style="font-size:20px;color:white">New Register</a>
+  <a href="#"style="font-size:20px;color:white" >Contact</a>
+</div>
+<div class="container">
+<div id="main" style="width:1100px;">
+  <button class="openbtn" onclick="openNav()">
+  <div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div></button>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="sbi.png" class="img-rounded" width="10%;">  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="login.jsp"> <img src="user.png" class="img-rounded"></a>
+  </div>
+<!---------------------------------------------Slider------------------------------------------------------->
+<!----Coursel--->
+ 
+  <script src="js/jssor.slider.min.js"></script>
+    <script type="text/javascript">
+        jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:500,$Delay:30,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
+              {$Duration:500,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+              {$Duration:1000,x:-0.2,$Delay:40,$Cols:12,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+              {$Duration:2000,y:-1,$Delay:60,$Cols:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
+              {$Duration:1200,x:0.2,y:-0.1,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 2000;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+
+ <!---------------------------------Jssor-------------------------------------------------------->
+ <div class="container">
+    	<div class="row">
+  <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1100px;height:380px;overflow:hidden;">
+            <div>
+            
+                <img data-u="image" src="sbi8.png"  class="thumbnail"/>
+               
+            </div>
+            <div>
+                <img data-u="image" src="sbi1.jpg" class="thumbnail"/>
+            </div>
+            <div>
+                <img data-u="image" src="sbi2.jpg" class="thumbnail"/>
+            </div>
+            <div>
+                <img data-u="image" src="sbi3.jpg"  class="thumbnail"/>
+            </div>
+            <div>
+                <img data-u="image" src="sbi4.jpg"  class="thumbnail"/>
+            </div>
+             <div>
+                <img data-u="image" src="sbi7.jpg"  class="thumbnail"/>
+            </div>
+            <div>
+                <img data-u="image" src="sbi9.jpg"  class="thumbnail"/>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb053" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <path class="b" d="M11400,13800H4600c-1320,0-2400-1080-2400-2400V4600c0-1320,1080-2400,2400-2400h6800 c1320,0,2400,1080,2400,2400v6800C13800,12720,12720,13800,11400,13800z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();</script>
+
+
+<!-------------------------------------------Sliderenfd------------------------------------------------------->
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+</script>
+</body>
+</html>
